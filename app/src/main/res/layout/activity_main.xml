@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15sp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="120sp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|right"
+            android:text="税前月薪：" />
+
+        <EditText
+            android:id="@+id/pre_tax_salary"
+            android:layout_width="100sp"
+            android:layout_height="match_parent"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/cal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="计算" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="120sp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|right"
+            android:text="社保基数：" />
+
+        <EditText
+            android:id="@+id/social_insurance_base"
+            android:layout_width="100sp"
+            android:layout_height="match_parent"
+            android:inputType="number"
+            android:text="0" />
+
+        <CheckBox
+            android:id="@+id/custom_social_insurance_base"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="自定义" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="120sp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|right"
+            android:text="公积金基数：" />
+
+        <EditText
+            android:id="@+id/housing_provident_base"
+            android:layout_width="100sp"
+            android:layout_height="match_parent"
+            android:inputType="number"
+            android:text="0" />
+
+        <CheckBox
+            android:id="@+id/custom_housing_provident_base"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="自定义" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="120sp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|right"
+            android:text="补充住房公积金：" />
+
+        <Spinner
+            android:id="@+id/supplement_housing_provident_rate"
+            android:layout_width="100sp"
+            android:layout_height="match_parent"
+            android:entries="@array/supplement_housing_provident_rate"
+            android:prompt="@string/supplement_housing_provident_rate_prompt"
+            android:spinnerMode="dialog">
+
+        </Spinner>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5sp"
+        app:cardBackgroundColor="?android:colorBackground">
+
+        <de.codecrafters.tableview.TableView xmlns:table="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/salary_detail_table_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            table:tableView_columnCount="2" />
+
+        <TextView
+            android:id="@+id/about"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/about"></TextView>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

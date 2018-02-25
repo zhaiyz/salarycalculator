@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">上海工资计算器</string>
+    <string name="supplement_housing_provident_rate_prompt">单位或个人汇缴比例</string>
+    <string name="about">程序说明 \n
+1. 只适用于工资所得 \n
+2. 参数有效时间从2017年4月1日至2018年3月31日 \n
+3. 社保基数上限19512元，下限3902元 \n
+4. 住房公积金缴存比例分别为单位7%，职工7%,月缴存额上限为2732元，下限为306元 \n
+5. 补充住房公积金（非政策强制）按职工本人和单位各1%至5%的缴存比例所对应的月缴存额上限为1952元 \n
+6. 上海社保缴费比例，养老保险：个人8%；医疗保险：个人2%；失业保险：个人0.5%；生育保险和工伤保险个人不缴费 \n
+7. 养老保险，医疗保险，失业保险精确到角，逢分进角；公积金精确到元，四舍五入
+8. 个人所得税，按2011年9月1日起调整后的7级超额累进税率 \n
+9. 社保基数和公积金基数默认根据税前月薪和上下限自动计算，如不准可以选中自定义手动修改
+    </string>
+    <string-array name="supplement_housing_provident_rate">
+        <item>无</item>
+        <item>1%</item>
+        <item>2%</item>
+        <item>3%</item>
+        <item>4%</item>
+        <item>5%</item>
+    </string-array>
+</resources>
