@@ -21,7 +21,7 @@
 
 ## 程序运行截图
 ![进入程序](https://raw.githubusercontent.com/zhaiyz/salarycalculator/master/README_FILES/1-iloveimg-resized.jpg)
+![选择补充住房公积金](https://raw.githubusercontent.com/zhaiyz/salarycalculator/master/README_FILES/5-iloveimg-resized.jpg)
 ![输入税前工资](https://raw.githubusercontent.com/zhaiyz/salarycalculator/master/README_FILES/2-iloveimg-resized.jpg)
 ![输入税前工资](https://raw.githubusercontent.com/zhaiyz/salarycalculator/master/README_FILES/3-iloveimg-resized.jpg)
 ![自定义社保和公和金基数](https://raw.githubusercontent.com/zhaiyz/salarycalculator/master/README_FILES/4-iloveimg-resized.jpg)
-![选择补充住房公积金](https://raw.githubusercontent.com/zhaiyz/salarycalculator/master/README_FILES/5-iloveimg-resized.jpg)
