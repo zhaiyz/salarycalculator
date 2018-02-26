@@ -71,6 +71,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         || new BigDecimal(s.toString()).compareTo(BigDecimal.valueOf(2300)) == -1) {
                     detailTableView.setVisibility(View.INVISIBLE);
                     about.setVisibility(View.VISIBLE);
+
+                    socialInsuranceBaseEditText.setText(String.valueOf(3902));
+                    housingProvidentBaseEditText.setText(String.valueOf(2185));
                 } else {
                     about.setVisibility(View.INVISIBLE);
                     cal();
@@ -185,21 +188,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     // 计算公积金
-    // 2185-19514
+    // 2185-19512
     private BigDecimal getHousingProvidentBase() {
         BigDecimal housingProvidentBase = new BigDecimal(housingProvidentBaseEditText.getText().toString());
         BigDecimal preTaxSalary = new BigDecimal(preTaxSalaryEditText.getText().toString());
         if (customHousingProvidentBaseCheckBox.isChecked()) {
             if (housingProvidentBase.compareTo(BigDecimal.valueOf(2185)) == -1) {
                 housingProvidentBaseEditText.setText(String.valueOf(2185));
-            } else if (housingProvidentBase.compareTo(BigDecimal.valueOf(19514)) == 1) {
-                housingProvidentBaseEditText.setText(String.valueOf(19514));
+            } else if (housingProvidentBase.compareTo(BigDecimal.valueOf(19512)) == 1) {
+                housingProvidentBaseEditText.setText(String.valueOf(19512));
             }
         } else {
             if (preTaxSalary.compareTo(BigDecimal.valueOf(2185)) == -1) {
                 housingProvidentBaseEditText.setText(String.valueOf(2185));
-            } else if (preTaxSalary.compareTo(BigDecimal.valueOf(19514)) == 1) {
-                housingProvidentBaseEditText.setText(String.valueOf(19514));
+            } else if (preTaxSalary.compareTo(BigDecimal.valueOf(19512)) == 1) {
+                housingProvidentBaseEditText.setText(String.valueOf(19512));
             } else {
                 housingProvidentBaseEditText.setText(preTaxSalaryEditText.getText());
             }
