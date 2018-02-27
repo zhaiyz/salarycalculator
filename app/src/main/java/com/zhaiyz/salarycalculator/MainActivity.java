@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -55,6 +56,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         detailTableView = findViewById(R.id.salary_detail_table_view);
         detailTableView.setVisibility(View.INVISIBLE);
         about = findViewById(R.id.about);
+        about.setMovementMethod(new ScrollingMovementMethod());
 
         preTaxSalaryEditText.addTextChangedListener(new TextWatcher() {
             @Override

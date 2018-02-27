@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="15sp">
+    android:padding="15dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -12,14 +12,14 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="120sp"
+            android:layout_width="120dp"
             android:layout_height="match_parent"
             android:gravity="center_vertical|right"
             android:text="税前月薪：" />
 
         <EditText
             android:id="@+id/pre_tax_salary"
-            android:layout_width="100sp"
+            android:layout_width="100dp"
             android:layout_height="match_parent"
             android:inputType="number" />
 
@@ -37,14 +37,14 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="120sp"
+            android:layout_width="120dp"
             android:layout_height="match_parent"
             android:gravity="center_vertical|right"
             android:text="社保基数：" />
 
         <EditText
             android:id="@+id/social_insurance_base"
-            android:layout_width="100sp"
+            android:layout_width="100dp"
             android:layout_height="match_parent"
             android:inputType="number"
             android:text="0" />
@@ -63,14 +63,14 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="120sp"
+            android:layout_width="120dp"
             android:layout_height="match_parent"
             android:gravity="center_vertical|right"
             android:text="公积金基数：" />
 
         <EditText
             android:id="@+id/housing_provident_base"
-            android:layout_width="100sp"
+            android:layout_width="100dp"
             android:layout_height="match_parent"
             android:inputType="number"
             android:text="0" />
@@ -89,14 +89,14 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="120sp"
+            android:layout_width="120dp"
             android:layout_height="match_parent"
             android:gravity="center_vertical|right"
             android:text="补充住房公积金：" />
 
         <Spinner
             android:id="@+id/supplement_housing_provident_rate"
-            android:layout_width="100sp"
+            android:layout_width="100dp"
             android:layout_height="match_parent"
             android:entries="@array/supplement_housing_provident_rate"
             android:prompt="@string/supplement_housing_provident_rate_prompt"
@@ -109,7 +109,7 @@
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="5sp"
+        android:layout_marginTop="5dp"
         app:cardBackgroundColor="?android:colorBackground">
 
         <de.codecrafters.tableview.TableView xmlns:table="http://schemas.android.com/apk/res-auto"
@@ -121,7 +121,9 @@
         <TextView
             android:id="@+id/about"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="30"
+            android:scrollbars="vertical"
             android:text="@string/about"></TextView>
 
     </android.support.v7.widget.CardView>
