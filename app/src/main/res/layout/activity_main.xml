@@ -46,6 +46,8 @@
             android:id="@+id/social_insurance_base"
             android:layout_width="100dp"
             android:layout_height="match_parent"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
             android:inputType="number"
             android:text="0" />
 
@@ -72,6 +74,8 @@
             android:id="@+id/housing_provident_base"
             android:layout_width="100dp"
             android:layout_height="match_parent"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
             android:inputType="number"
             android:text="0" />
 

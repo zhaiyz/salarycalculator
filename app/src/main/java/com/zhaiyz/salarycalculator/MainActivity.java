@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -84,6 +85,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
 
         cal.setOnClickListener(this);
+
+        customSocialInsuranceBaseCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                socialInsuranceBaseEditText.setFocusable(isChecked);
+                socialInsuranceBaseEditText.setFocusableInTouchMode(isChecked);
+                socialInsuranceBaseEditText.requestFocus();
+
+                String content = socialInsuranceBaseEditText.getText().toString();
+                socialInsuranceBaseEditText.setSelection(content.length());
+            }
+        });
+
+        customHousingProvidentBaseCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                housingProvidentBaseEditText.setFocusable(isChecked);
+                housingProvidentBaseEditText.setFocusableInTouchMode(isChecked);
+                housingProvidentBaseEditText.requestFocus();
+
+                String content = housingProvidentBaseEditText.getText().toString();
+                housingProvidentBaseEditText.setSelection(content.length());
+            }
+        });
     }
 
     @Override
