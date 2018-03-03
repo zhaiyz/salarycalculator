@@ -7,6 +7,7 @@ import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.text.method.ScrollingMovementMethod;
+import android.view.Gravity;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -15,6 +16,7 @@ import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.math.BigDecimal;
 
@@ -109,6 +111,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 housingProvidentBaseEditText.setSelection(content.length());
             }
         });
+
+        socialInsuranceBaseEditText.setOnClickListener(this);
+        housingProvidentBaseEditText.setOnClickListener(this);
     }
 
     @Override
@@ -129,6 +134,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                     break;
                 }
+            }
+            case R.id.social_insurance_base: {
+                if (!customSocialInsuranceBaseCheckBox.isChecked()) {
+                    Toast toast = Toast.makeText(this, "选中自定义后才可输入", Toast.LENGTH_SHORT);
+                    toast.setGravity(Gravity.CENTER, 0, 0);
+                    toast.show();
+                }
+                break;
+            }
+            case R.id.housing_provident_base: {
+                if (!customHousingProvidentBaseCheckBox.isChecked()) {
+                    Toast toast = Toast.makeText(this, "选中自定义后才可输入", Toast.LENGTH_SHORT);
+                    toast.setGravity(Gravity.CENTER, 0, 0);
+                    toast.show();
+                }
+                break;
             }
             default:
                 break;
