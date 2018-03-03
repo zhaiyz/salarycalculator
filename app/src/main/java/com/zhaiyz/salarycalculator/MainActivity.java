@@ -157,6 +157,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void cal() {
+        if (TextUtils.isEmpty(socialInsuranceBaseEditText.getText())) {
+            return;
+        }
+        if (TextUtils.isEmpty(housingProvidentBaseEditText.getText())) {
+            return;
+        }
+
         BigDecimal preTaxSalary = new BigDecimal(preTaxSalaryEditText.getText().toString());
         BigDecimal socialInsuranceBase = getSocialInsuranceBase();
         BigDecimal housingProvidentBase = getHousingProvidentBase();
