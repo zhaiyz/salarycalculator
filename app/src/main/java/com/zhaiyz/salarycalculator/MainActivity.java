@@ -73,11 +73,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void afterTextChanged(Editable s) {
                 if (TextUtils.isEmpty(s.toString().trim())
-                        || new BigDecimal(s.toString()).compareTo(BigDecimal.valueOf(2300)) == -1) {
+                        || new BigDecimal(s.toString()).compareTo(BigDecimal.valueOf(2420)) == -1) {
                     detailTableView.setVisibility(View.INVISIBLE);
                     about.setVisibility(View.VISIBLE);
 
-                    socialInsuranceBaseEditText.setText(String.valueOf(3902));
+                    socialInsuranceBaseEditText.setText(String.valueOf(4279));
                     housingProvidentBaseEditText.setText(String.valueOf(2185));
                 } else {
                     about.setVisibility(View.INVISIBLE);
@@ -220,21 +220,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     // 计算社保基数
-    // 社保范围3902-19512
+    // 社保范围4279-21396
     private BigDecimal getSocialInsuranceBase() {
         BigDecimal socialInsuranceBase = new BigDecimal(socialInsuranceBaseEditText.getText().toString());
         BigDecimal preTaxSalary = new BigDecimal(preTaxSalaryEditText.getText().toString());
         if (customSocialInsuranceBaseCheckBox.isChecked()) {
-            if (socialInsuranceBase.compareTo(BigDecimal.valueOf(3902)) == -1) {
-                socialInsuranceBaseEditText.setText(String.valueOf(3902));
-            } else if (socialInsuranceBase.compareTo(BigDecimal.valueOf(19512)) == 1) {
-                socialInsuranceBaseEditText.setText(String.valueOf(19512));
+            if (socialInsuranceBase.compareTo(BigDecimal.valueOf(4279)) == -1) {
+                socialInsuranceBaseEditText.setText(String.valueOf(4279));
+            } else if (socialInsuranceBase.compareTo(BigDecimal.valueOf(21396)) == 1) {
+                socialInsuranceBaseEditText.setText(String.valueOf(21396));
             }
         } else {
-            if (preTaxSalary.compareTo(BigDecimal.valueOf(3902)) == -1) {
-                socialInsuranceBaseEditText.setText(String.valueOf(3902));
-            } else if (preTaxSalary.compareTo(BigDecimal.valueOf(19512)) == 1) {
-                socialInsuranceBaseEditText.setText(String.valueOf(19512));
+            if (preTaxSalary.compareTo(BigDecimal.valueOf(4279)) == -1) {
+                socialInsuranceBaseEditText.setText(String.valueOf(4279));
+            } else if (preTaxSalary.compareTo(BigDecimal.valueOf(21396)) == 1) {
+                socialInsuranceBaseEditText.setText(String.valueOf(21396));
             } else {
                 socialInsuranceBaseEditText.setText(preTaxSalaryEditText.getText());
             }
